@@ -1,8 +1,5 @@
 'use strict';
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
-const AllureReporter = require('jasmine-allure-reporter');
-const moment = require('moment');
-
 
 exports.config = {
 	framework: 'jasmine2',
