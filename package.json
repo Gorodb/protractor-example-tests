@@ -1,0 +1,46 @@
+{
+  "name": "protractor",
+  "version": "1.0.0",
+  "license": "ISC",
+  "description": "Protractor example",
+  "keywords": [
+    "protractor",
+    "testing",
+    "selenium",
+    "webdriverJS",
+    "automation testing"
+  ],
+  "scripts": {
+    "pretest": "rm -rf allure-results && rm -rf allure-report",
+    "test": "protractor conf.js",
+    "posttest": "allure generate allure-results --clean -o allure-report || true",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start"
+  },
+  "author": "Ramis Vakazov <rvakazov@gmail.com>",
+  "dependencies": {
+    "allure-js-commons": "^1.3.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "chromedriver": "^2.30.1",
+    "detect-indent": "^5.0.0",
+    "fs-extra": "^2.1.2",
+    "jasmine-allure-reporter": "^1.0.2",
+    "jsesc": "^2.5.1",
+    "moment": "^2.20.1",
+    "protractor-screenshoter-plugin": "^0.8.1",
+    "webpack": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "jasmine-spec-reporter": "^4.1.1",
+    "protractor": "^5.2.2",
+    "protractor-helpers": "^1.1.472"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "repository": ""
+}
