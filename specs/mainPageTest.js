@@ -6,15 +6,23 @@ describe(`Yandex page test example:`, function() {
     });
 
     describe(`Should search for text:`, function() {
-
         it('Search text', function() {
             YandexPage.searchForText("Protractor tests");
         });
 
         it('Assert search results', function() {
-            YandexPage.assertForResultCount();
+            YandexPage.assertForResultCount(9);
         });
-
     });
 
+    describe(`Should search for text:`, function() {
+        it('Search text', function() {
+            YandexPage.openMainPage();
+            YandexPage.anotherSearchImpl("Protractor tests");
+        });
+
+        it('Assert search results', function() {
+            YandexPage.assertForResultCount();
+        });
+    });
 });
