@@ -1,13 +1,13 @@
 import { YandexPage } from '../pages/yandexPage.js';
 
 describe(`Yandex page test example:`, () => {
-    beforeAll(() => {
-        YandexPage.openMainPage();
+    beforeAll(async () => {
+        await YandexPage.openMainPage();
     });
 
     describe(`Should search for text:`, () => {
-        it('Search text', () => {
-            YandexPage.searchForText("Protractor tests");
+        it('Search text', async () => {
+            await YandexPage.searchForText("Protractor tests");
         });
 
         it('Assert search results', () => {
@@ -18,11 +18,11 @@ describe(`Yandex page test example:`, () => {
     describe(`Should search for text:`, () => {
         it('Search text', () => {
             YandexPage.openMainPage();
-            YandexPage.anotherSearchImpl("Protractor tests");
+            YandexPage.anotherSearchImpl();
         });
 
-        it('Assert search results', () => {
-            // YandexPage.assertForResultCount();
+        it('Assert search results', async () => {
+            await YandexPage.assertForResultCount();
         });
     });
 });
