@@ -2,7 +2,8 @@
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 
 exports.config = {
-	framework: 'jasmine2',
+    framework: 'jasmine2',
+    // SELENIUM_PROMISE_MANAGER: false,
     plugins: [{
         package: 'protractor-screenshoter-plugin',
         screenshotPath: './REPORTS/e2e',
@@ -23,11 +24,7 @@ exports.config = {
 	specs: [
         'specs/mainPageTest.js'
     ],
-	jasmineNodeOpts: {
-	    isVerbose: true,
-	    showTiming: true,
-	    showColors: true,
-	    includeStackTrace: true,
+    jasmineNodeOpts: {
 	    defaultTimeoutInterval: 30000
 	},
     multiCapabilities: [

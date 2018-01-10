@@ -25,7 +25,7 @@ export class YandexPage {
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
     }
 
-    static assertForResultCount(i = 10) {
+    static assertForResultCount(i = 9) {
         results.then((items) => {
             log.info(`${items.length} search results`);
             expect(items.length).toBeGreaterThan(i);
