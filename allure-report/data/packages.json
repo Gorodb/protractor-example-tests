@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Yandex page test example: Should search for text 1:",
+    "children" : [ {
+      "name" : "Search text",
+      "uid" : "e8fa0cf7a9f51baf",
+      "parentUid" : "d70279923fa8a6870fb39b7c564536c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1515664031926,
+        "stop" : 1515664034500,
+        "duration" : 2574
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Assert search results",
+      "uid" : "f0286e6ecdad4e81",
+      "parentUid" : "d70279923fa8a6870fb39b7c564536c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1515664034500,
+        "stop" : 1515664035018,
+        "duration" : 518
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d70279923fa8a6870fb39b7c564536c8"
+  }, {
+    "name" : "Yandex page test example: Should search for text 2:",
+    "children" : [ {
+      "name" : "Search text",
+      "uid" : "dbd3e980670feff8",
+      "parentUid" : "0ea55aa1b9039a48d62b96c2d1339783",
+      "status" : "passed",
+      "time" : {
+        "start" : 1515664035024,
+        "stop" : 1515664038113,
+        "duration" : 3089
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Assert search results",
+      "uid" : "5b842db3a2598fe1",
+      "parentUid" : "0ea55aa1b9039a48d62b96c2d1339783",
+      "status" : "passed",
+      "time" : {
+        "start" : 1515664038113,
+        "stop" : 1515664038737,
+        "duration" : 624
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "0ea55aa1b9039a48d62b96c2d1339783"
+  } ]
+}

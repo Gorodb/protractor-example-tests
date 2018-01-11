@@ -1,0 +1,53 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Search text",
+    "uid" : "e8fa0cf7a9f51baf",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1515664031926,
+      "stop" : 1515664034500,
+      "duration" : 2574
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Assert search results",
+    "uid" : "5b842db3a2598fe1",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1515664038113,
+      "stop" : 1515664038737,
+      "duration" : 624
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Assert search results",
+    "uid" : "f0286e6ecdad4e81",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1515664034500,
+      "stop" : 1515664035018,
+      "duration" : 518
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Search text",
+    "uid" : "dbd3e980670feff8",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1515664035024,
+      "stop" : 1515664038113,
+      "duration" : 3089
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

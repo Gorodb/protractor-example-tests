@@ -5,7 +5,7 @@ describe(`Yandex page test example:`, () => {
         await YandexPage.openMainPage();
     });
 
-    describe(`Should search for text:`, () => {
+    describe(`Should search for text 1:`, () => {
         it('Search text', () => {
             YandexPage.searchForText("Protractor tests");
         });
@@ -15,7 +15,7 @@ describe(`Yandex page test example:`, () => {
         });
     });
 
-    describe(`Should search for text:`, () => {
+    describe(`Should search for text 2:`, () => {
         it('Search text', () => {
             YandexPage.openMainPage();
             YandexPage.anotherSearchImpl();

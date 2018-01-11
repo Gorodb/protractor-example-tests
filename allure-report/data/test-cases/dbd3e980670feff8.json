@@ -1,0 +1,61 @@
+{
+  "uid" : "dbd3e980670feff8",
+  "name" : "Search text",
+  "fullName" : "Yandex page test example: Should search for text 2:.Search text",
+  "historyId" : "3499f134abb6c56c19492b4d17418830",
+  "time" : {
+    "start" : 1515664035024,
+    "stop" : 1515664038113,
+    "duration" : 3089
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "47ad0f3c88296887",
+      "name" : "Screenshot",
+      "source" : "47ad0f3c88296887.png",
+      "type" : "image/png",
+      "size" : 428150
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Yandex page test example: Should search for text 2:"
+  }, {
+    "name" : "testClass",
+    "value" : "Yandex page test example: Should search for text 2:"
+  }, {
+    "name" : "testMethod",
+    "value" : "Search text"
+  }, {
+    "name" : "package",
+    "value" : "Yandex page test example: Should search for text 2:"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dbd3e980670feff8.json",
+  "parameterValues" : [ ]
+}

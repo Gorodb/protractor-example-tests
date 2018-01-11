@@ -33,13 +33,9 @@ exports.config = {
     		browserName: 'chrome',
 		    chromeOptions: {
 		        args: [
-                    '--test-type=ui',
-		            '--disable-gpu',
-		            '--disable-impl-side-painting',
-		            '--disable-gpu-sandbox',
-		            '--disable-accelerated-2d-canvas',
-		            '--disable-accelerated-jpeg-decoding',
-		            '--no-sandbox'
+                    "--headless", "--disable-gpu", "--window-size=1024x768",  //headless mode
+                    // '--test-type=ui', '--disable-gpu', '--disable-impl-side-painting','--disable-gpu-sandbox',
+                    // '--disable-accelerated-2d-canvas', '--disable-accelerated-jpeg-decoding', '--no-sandbox'
 		        ]
 		    }
    		}
