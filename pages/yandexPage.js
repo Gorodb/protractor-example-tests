@@ -1,11 +1,7 @@
 const helpers = require('protractor-helpers');
 import { log } from '../helpers/logHelper.js';
 import { getRandomInt, loremText } from '../helpers/dataHelper.js';
-
-let searchField = element(by.xpath(`//div[@class="search2__input"]//span[@class="input__box"]/input`));
-let searchBtn = element(by.xpath('//div[@class="search2__button"]/button'));
-let results = element.all(by.xpath(`//div[@class="content__left"]/ul/li`));
-let resultByIndex = (i) => element(by.xpath(`//div[@class="content__left"]/ul/li[${i}]//h2`));
+import Yandex from './pageObjects/yandexPageObjets';
 
 export class YandexPage {
     static async openMainPage() {
@@ -13,28 +9,29 @@ export class YandexPage {
         await browser.get(browser.params.baseUrl);
     }
 
-    static async searchForText(text = loremText(20)) {
-        expect(searchField.waitReady()).toBeTruthy();
-        helpers.clearAndSetValue(searchField, text);
-        await searchBtn.click();
+    static searchForText(text = loremText(20)) {
+        expect(Yandex.searchField.waitReady()).toBeTruthy();
+        helpers.clearAndSetValue(Yandex.searchField, text);
+        Yandex.searchBtn.click();
     }
 
     static anotherSearchImpl(text = loremText(20)) {
-        expect(searchField.waitReady()).toBeTruthy();
-        helpers.clearAndSetValue(searchField, text);
+        expect(Yandex.searchField.waitReady()).toBeTruthy();
+        helpers.clearAndSetValue(Yandex.searchField, text);
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
     }
 
     static async assertForResultCount(i = 9) {
-        // results.then((items) => {
-            // log.info(`${items.length} search results`);
-            // expect(items.length).toBeGreaterThan(i);
-        // });
+        // То, как это работало без async await
+        log.info(`Без await: ${Yandex.resultByIndex(getRandomInt(1,(await Yandex.results).length)).getText()}`);
+        Yandex.results.then((items) => {
+            log.info(`${items.length} search results`);
+            expect(items.length).toBeGreaterThan(i);
+        });
 
-        log.info(`Без await: ${resultByIndex(getRandomInt(1,(await results).length)).getText()}`);
-        log.info(`C await: ${await resultByIndex(getRandomInt(1,(await results).length)).getText()}`);
-
-        log.info(`${(await results).length} search results`);
-        expect((await results).length).toBeGreaterThan(i);
+        // С async await
+        log.info(`C await: ${await Yandex.resultByIndex(getRandomInt(1,(await Yandex.results).length)).getText()}`);
+        log.info(`${(await Yandex.results).length} search results`);
+        expect((await Yandex.results).length).toBeGreaterThan(i);
     }
 }

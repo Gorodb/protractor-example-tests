@@ -11,13 +11,13 @@ export class log {
 
     static warn(value) {
         browser.controlFlow().execute(function() {
-            console.warn(`INFO ${now}: ${value} `);
+            console.warn(`WARN ${now}: ${value} `);
         })
     }
 
     static error(value) {
         browser.controlFlow().execute(function() {
-            console.error(`INFO ${now}: ${value} `);
+            console.error(`ERROR ${now}: ${value} `);
         })
     }
 }

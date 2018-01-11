@@ -6,8 +6,8 @@ describe(`Yandex page test example:`, () => {
     });
 
     describe(`Should search for text:`, () => {
-        it('Search text', async () => {
-            await YandexPage.searchForText("Protractor tests");
+        it('Search text', () => {
+            YandexPage.searchForText("Protractor tests");
         });
 
         it('Assert search results', () => {

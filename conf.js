@@ -45,21 +45,21 @@ exports.config = {
    		}
     ],
     onPrepare: function () {
-        require('./helpers/waitReady.js');
+        require('./helpers/waitReady.js'); //добавляет ожидание локатора waitReady к jasmine
         require('babel-core/register');
         const AllureReporter = require('jasmine-allure-reporter');
         browser.driver.manage().window().maximize();
         browser.waitForAngularEnabled(false);
         browser.ignoreSynchronization = true;
-        jasmine.getEnv().addReporter(new SpecReporter({
+        jasmine.getEnv().addReporter(new SpecReporter({ //jasmine console reporter
           spec: {
             displayStacktrace: true
           }
         }));
-        jasmine.getEnv().addReporter(new AllureReporter({
+        jasmine.getEnv().addReporter(new AllureReporter({ //allure reporter
             resultsDir: `allure-results`
         }));
-        jasmine.getEnv().afterEach(function(done){
+        jasmine.getEnv().afterEach(function(done){ //allure screenshots
             browser.takeScreenshot().then(function (png) {
                 allure.createAttachment('Screenshot', function () {
                     return new Buffer(png, 'base64')
@@ -70,6 +70,6 @@ exports.config = {
         return global.browser.getProcessedConfig().then(function(config) { });
 	},
     params: {
-        baseUrl: 'https://yandex.ru'
+        baseUrl: 'https://yandex.ru/'
     }
 };
